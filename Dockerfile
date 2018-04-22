@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:stretch-slim
 RUN apt update && apt-get install -y ansible openssh-client \
   sudo tmux iputils-ping vim curl wget git
 RUN adduser siuyin
