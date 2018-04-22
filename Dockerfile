@@ -1,4 +1,6 @@
 FROM debian:stretch-slim
+RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 RUN apt update && apt-get install -y ansible openssh-client \
   sudo tmux iputils-ping vim curl wget git
 RUN adduser siuyin
